@@ -1,0 +1,20 @@
+@import './abstract/variables';
+@import './global/normalize';
+
+body {
+    font-family: $font-family;
+    color: $font-color-main;
+    background-color: $background-color;
+}
+
+.title{
+    font-weight: 800;
+    font-size: $size-logo;
+    text-align: center;
+}
+
+/* Makes the div become a textarea */
+.text-area:empty:before {
+    content:attr(data-placeholder);
+    color: $font-color-placeholder;
+}
