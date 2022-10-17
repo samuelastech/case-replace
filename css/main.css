@@ -196,6 +196,7 @@ body {
 .text-area {
   max-width: 768px;
   margin: 0 auto;
+  padding: 0 15px;
   min-height: 150px;
   cursor: text;
   outline: none;
@@ -206,8 +207,12 @@ body {
 }
 
 .tools-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   max-width: 768px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 .tools-box > .button {
   width: 170px;
@@ -219,6 +224,7 @@ body {
   transition: background 200ms ease-out, transform 150ms ease;
   text-align: left;
   padding: 10px 20px;
+  margin: 0 5px 5px 0;
 }
 .tools-box > .button:hover {
   background-color: rgba(198, 203, 222, 0.5);

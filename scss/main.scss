@@ -28,6 +28,9 @@ body {
 }
 
 .tools-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     @include page-center;
 
     & > .button{
@@ -40,6 +43,7 @@ body {
         transition: background 200ms ease-out, transform 150ms ease;
         text-align: left;
         padding: 10px 20px;
+        margin: 0 5px 5px 0;
     }
 
     & > .button:hover{
