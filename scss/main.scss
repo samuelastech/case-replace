@@ -14,7 +14,15 @@ body {
 }
 
 /* Makes the div become a textarea */
-.text-area:empty:before {
-    content:attr(data-placeholder);
-    color: $font-color-placeholder;
+.text-area{
+    max-width: 900px;
+    min-height: 150px;
+    margin: 0 auto;
+    cursor: text;
+    outline: none;
+
+    &:empty:before{
+        content:attr(data-placeholder);
+        color: $font-color-placeholder;
+    }
 }
