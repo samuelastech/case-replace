@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+$gray: rgba(198, 203, 222, 0.7);
+$gray-light: rgba(198, 203, 222, 0.5);
+$gray-dark: #737a91;
+
 $font-family: 'Inter', sans-serif;
-$font-color-placeholder: #737a91;
+$font-color-placeholder: $gray-dark;
 $font-color-main: #0e101a;
 $background-color: #ffff;
 
+
 $size-logo: 2rem;
 $size-body: 1rem;
+$size-helptext: 0.75rem;

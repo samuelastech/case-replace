@@ -194,13 +194,40 @@ body {
 
 /* Makes the div become a textarea */
 .text-area {
-  max-width: 900px;
-  min-height: 150px;
+  max-width: 768px;
   margin: 0 auto;
+  min-height: 150px;
   cursor: text;
   outline: none;
 }
 .text-area:empty:before {
   content: attr(data-placeholder);
   color: #737a91;
+}
+
+.tools-box {
+  max-width: 768px;
+  margin: 0 auto;
+}
+.tools-box > .button {
+  width: 170px;
+  background-color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid rgba(198, 203, 222, 0.7);
+  cursor: pointer;
+  transition: background 200ms ease-out, transform 150ms ease;
+  text-align: left;
+  padding: 10px 20px;
+}
+.tools-box > .button:hover {
+  background-color: rgba(198, 203, 222, 0.5);
+}
+.tools-box > .button > .helptext {
+  font-weight: 300;
+  font-size: 0.75rem;
+}
+.tools-box > .button > .helptext:before {
+  content: "\a";
+  white-space: pre;
 }/*# sourceMappingURL=main.css.map */
