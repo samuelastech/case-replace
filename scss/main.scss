@@ -6,6 +6,7 @@ body {
     font-family: $font-family;
     color: $font-color-main;
     background-color: $background-color;
+    padding: 0 15px;
 }
 
 .title{
@@ -20,10 +21,18 @@ body {
     min-height: 150px;
     cursor: text;
     outline: none;
+    border-bottom: 1px solid $gray;
+    margin-bottom: 15px;
+    transition: border 0.2s ease-in-out;
+    
 
     &:empty:before{
         content:attr(data-placeholder);
         color: $font-color-placeholder;
+    }
+
+    &:focus{
+        border-bottom: 1px solid $main-color;
     }
 }
 

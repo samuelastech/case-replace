@@ -184,6 +184,7 @@ body {
   font-family: "Inter", sans-serif;
   color: #0e101a;
   background-color: white;
+  padding: 0 15px;
 }
 
 .title {
@@ -196,14 +197,19 @@ body {
 .text-area {
   max-width: 768px;
   margin: 0 auto;
-  padding: 0 15px;
   min-height: 150px;
   cursor: text;
   outline: none;
+  border-bottom: 1px solid rgba(198, 203, 222, 0.7);
+  margin-bottom: 15px;
+  transition: border 0.2s ease-in-out;
 }
 .text-area:empty:before {
   content: attr(data-placeholder);
   color: #737a91;
+}
+.text-area:focus {
+  border-bottom: 1px solid #41B2D1;
 }
 
 .tools-box {
@@ -212,7 +218,6 @@ body {
   justify-content: center;
   max-width: 768px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 .tools-box > .button {
   width: 170px;
