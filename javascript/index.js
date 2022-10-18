@@ -12,7 +12,6 @@ const button = {}
 const areaInnerText = () => {
     const text = textArea.innerText
     if(text){
-        textArea.classList.remove('-error')
         return textArea.innerText
     }
     else {
@@ -103,5 +102,11 @@ buttons.forEach(element => {
     button[clickedButton] = element
     element.addEventListener('click', () => {
         handleButtonClick(clickedButton)
+
+        // Removing .-error class on focusin
+        const onError = textArea.classList.contains('-error')
+        if(onError) textArea.addEventListener('focusin', () => {
+            textArea.classList.remove('-error')
+        })
     })
 })
