@@ -7,7 +7,7 @@ const button = {}
 
 /**
  * @returns the inner text of the text area
- * 'throws' an error if it's null
+ * @throws an error if it's null
  */
 const areaInnerText = () => {
     const text = textArea.innerText
@@ -15,45 +15,64 @@ const areaInnerText = () => {
         textArea.classList.remove('-error')
         return textArea.innerText
     }
-    else textArea.classList.toggle('-error')
+    else {
+        textArea.classList.toggle('-error')
+        throw new Error('null input')
+    }
 }
 
 /**
  * Text to lower case
  */
 const toLower = () => {
-    const text = areaInnerText()
-    textArea.innerText = text.toLowerCase()
+    try {
+        const text = areaInnerText()
+        textArea.innerText = text.toLowerCase()
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 /**
  * Text to UPPER CASE
  */
 const toUpper = () => {
-    const text = areaInnerText()
-    textArea.innerText = text.toUpperCase()
+    try {
+        const text = areaInnerText()
+        textArea.innerText = text.toUpperCase()
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 /**
  * Text to Sentence case
  */
  const toSentence = () => {
-    const text = areaInnerText()
-    const capitalText = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
-    textArea.innerText = capitalText
+    try {
+        const text = areaInnerText()
+        const capitalText = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
+        textArea.innerText = capitalText
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 /**
  * Text to Capitalized Case
  */
  const toCapitalized = () => {
-    const text = areaInnerText().split(' ')
-    capitalWord = []
-    text.forEach(word => {
-        const capitalText = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-        capitalWord.push(capitalText)
-    })
-    textArea.innerText = capitalWord.join(' ')
+    try {
+        const text = areaInnerText().split(' ')
+        capitalWord = []
+        text.forEach(word => {
+            const capitalText = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+            capitalWord.push(capitalText)
+        })
+        textArea.innerText = capitalWord.join(' ')
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 /**
