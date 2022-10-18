@@ -16,7 +16,7 @@ const areaInnerText = () => {
         return textArea.innerText
     }
     else {
-        textArea.classList.toggle('-error')
+        textArea.classList.add('-error')
         throw new Error('null input')
     }
 }
