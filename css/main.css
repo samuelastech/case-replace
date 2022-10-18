@@ -202,6 +202,9 @@ body {
   outline: none;
   border-bottom: 1px solid rgba(198, 203, 222, 0.7);
   margin-bottom: 15px;
+  border-radius: 4px 4px 0 0;
+  padding: 10px;
+  background-color: #f9fdfe;
   transition: border 0.2s ease-in-out;
 }
 .text-area:empty:before {
@@ -213,6 +216,7 @@ body {
 }
 .text-area.-error { /* Null text area */
   border-bottom: 1px solid #EC3D2B;
+  background-color: #fef5f4;
 }
 
 .tools-box {

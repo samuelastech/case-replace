@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 $main-color: #41B2D1;
+$main-color-light: lighten($main-color, 44.8%);;
+
 $error-color: #EC3D2B;
+$error-color-light: lighten($error-color, 43%);
+
 $gray: rgba(198, 203, 222, 0.7);
 $gray-light: rgba(198, 203, 222, 0.5);
 $gray-dark: #737a91;

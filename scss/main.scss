@@ -23,6 +23,9 @@ body {
     outline: none;
     border-bottom: 1px solid $gray;
     margin-bottom: 15px;
+    border-radius: 4px 4px 0 0;
+    padding: 10px;
+    background-color: $main-color-light;
     transition: border 0.2s ease-in-out;
     
 
@@ -37,6 +40,7 @@ body {
 
     &.-error{ /* Null text area */
         border-bottom: 1px solid $error-color;
+        background-color: $error-color-light;
     }
 }
 
