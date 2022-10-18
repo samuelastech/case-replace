@@ -211,6 +211,9 @@ body {
 .text-area:focus {
   border-bottom: 1px solid #41B2D1;
 }
+.text-area.-error { /* Null text area */
+  border-bottom: 1px solid #EC3D2B;
+}
 
 .tools-box {
   display: flex;

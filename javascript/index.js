@@ -6,10 +6,23 @@ const buttons = [...document.querySelectorAll('[id]')]
 const button = {}
 
 /**
+ * @returns the inner text of the text area
+ * 'throws' an error if it's null
+ */
+const areaInnerText = () => {
+    const text = textArea.innerText
+    if(text){
+        textArea.classList.remove('-error')
+        return textArea.innerText
+    }
+    else textArea.classList.toggle('-error')
+}
+
+/**
  * Text to lower case
  */
 const toLower = () => {
-    const text = textArea.innerText
+    const text = areaInnerText()
     textArea.innerText = text.toLowerCase()
 }
 
@@ -17,7 +30,7 @@ const toLower = () => {
  * Text to UPPER CASE
  */
 const toUpper = () => {
-    const text = textArea.innerText
+    const text = areaInnerText()
     textArea.innerText = text.toUpperCase()
 }
 
@@ -25,7 +38,7 @@ const toUpper = () => {
  * Text to Sentence case
  */
  const toSentence = () => {
-    const text = textArea.innerText
+    const text = areaInnerText()
     const capitalText = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
     textArea.innerText = capitalText
 }
@@ -34,7 +47,7 @@ const toUpper = () => {
  * Text to Capitalized Case
  */
  const toCapitalized = () => {
-    const text = textArea.innerText.split(' ')
+    const text = areaInnerText().split(' ')
     capitalWord = []
     text.forEach(word => {
         const capitalText = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
