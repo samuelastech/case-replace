@@ -197,8 +197,9 @@ body {
 .text-area {
   max-width: 768px;
   margin: 0 auto;
-  min-height: 150px;
+  height: 150px;
   cursor: text;
+  overflow-y: auto;
   outline: none;
   border-bottom: 1px solid rgba(198, 203, 222, 0.7);
   margin-bottom: 15px;
@@ -206,6 +207,7 @@ body {
   padding: 10px;
   background-color: #f9fdfe;
   transition: border 0.2s ease-in-out;
+  line-height: 1.75rem;
 }
 .text-area:empty:before {
   content: attr(data-placeholder);

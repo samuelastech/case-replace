@@ -18,8 +18,9 @@ body {
 /* Makes the div become a textarea */
 .text-area{
     @include page-center;
-    min-height: 150px;
+    height: 150px;
     cursor: text;
+    overflow-y: auto;
     outline: none;
     border-bottom: 1px solid $gray;
     margin-bottom: 15px;
@@ -27,7 +28,7 @@ body {
     padding: 10px;
     background-color: $main-color-light;
     transition: border 0.2s ease-in-out;
-    
+    line-height: 1.75rem;
 
     &:empty:before{
         content:attr(data-placeholder);
