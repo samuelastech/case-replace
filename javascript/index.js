@@ -75,6 +75,31 @@ const toUpper = () => {
 }
 
 /**
+ * Verify if a char is upper or lower case
+ * @param {String} char 
+ * @returns 'true' if it's upper, 'false' if it's lower
+ */
+ const isUpperCase = (char) => !!/[A-Z]/.exec(char[0])
+
+/**
+ * Invert the cases
+ * If it's a uppercase it will be a lowercase and vice versa
+ */
+const toInverse = () => {
+    try {
+        const text = [...areaInnerText()]
+        let invertedText = ''
+        text.forEach(letter => {
+            invertedText += isUpperCase(letter) ? letter.toLowerCase() : letter.toUpperCase()
+        })
+
+        textArea.innerText = invertedText
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+/**
  * Verify which button was clicked and direct it to the function
  * @param {String} buttonID
  */
@@ -91,6 +116,9 @@ const handleButtonClick = (buttonID) => {
         
         case 'toUpper': toUpper()
             break;
+
+        case 'toInverse': toInverse()
+        break;
     }
 }
 
