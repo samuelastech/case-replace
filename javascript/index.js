@@ -7,6 +7,23 @@ const button = {}
 const tooltip = document.querySelector('.tooltiptext')
 
 /**
+ * Infos Refresh
+ */
+const words = document.querySelector('#wordsCounter')
+
+/**
+ * Count the number of words in the text area
+ */
+const wordsCounter = () => {
+    const text = textArea.innerText
+    const textWords = text.split(/\s+/)
+    let quantity = textWords.length
+    const lastElement = textWords[quantity-1]
+    if(lastElement === '') words.innerText = --quantity
+    else words.innerText = quantity
+}
+
+/**
  * Copies the text from text area and paste in the clipboard
  */
 const copyToClipboard = () => {
@@ -160,3 +177,11 @@ buttons.forEach(element => {
         })
     })
 })
+
+const addEventListenerAll = (element, events, fn) => { // Function
+	events.split(' ').forEach(event => {
+		element.addEventListener(event, fn)
+	})
+}
+
+addEventListenerAll(textArea, 'keyup focusout', wordsCounter)

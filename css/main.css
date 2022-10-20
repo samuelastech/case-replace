@@ -316,4 +316,14 @@ body {
 .tools-box > .button > .helptext:before {
   content: "\a";
   white-space: pre;
+}
+
+.box-infos {
+  margin-left: 10px;
+}
+.box-infos > .label {
+  font-weight: 800;
+}
+.box-infos > .label > .data {
+  font-weight: 400;
 }/*# sourceMappingURL=main.css.map */

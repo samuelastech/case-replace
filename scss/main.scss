@@ -138,3 +138,15 @@ body {
         white-space: pre;
     }
 }
+
+.box-infos{
+    margin-left: 10px;
+
+    & > .label{
+        font-weight: 800;
+    }
+
+    & > .label > .data{
+        font-weight: 400;
+    }
+}
