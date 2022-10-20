@@ -221,6 +221,72 @@ body {
   background-color: #fef5f4;
 }
 
+.utils-box {
+  max-width: 768px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.divider {
+  border: 1px solid rgba(198, 203, 222, 0.5);
+  width: 200px;
+  margin: 15px auto;
+}
+
+.copy-clipboard {
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 200ms ease-out, transform 150ms ease;
+  padding: 10px 20px;
+  position: relative;
+  background-color: #41B2D1;
+  color: white;
+  width: 170px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.copy-clipboard:hover {
+  background-color: #30a7c8;
+}
+.copy-clipboard:hover > .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.copy-clipboard > .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #737a91;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-weight: 400;
+}
+.copy-clipboard > .tooltiptext:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #737a91 transparent transparent transparent;
+}
+.copy-clipboard > .icon {
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+
 .tools-box {
   display: flex;
   flex-wrap: wrap;
@@ -229,15 +295,15 @@ body {
   margin: 0 auto;
 }
 .tools-box > .button {
-  width: 170px;
-  background-color: white;
   text-decoration: none;
-  border-radius: 4px;
-  border: 1px solid rgba(198, 203, 222, 0.7);
   cursor: pointer;
   transition: background 200ms ease-out, transform 150ms ease;
-  text-align: left;
   padding: 10px 20px;
+  width: 170px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid rgba(198, 203, 222, 0.7);
+  text-align: left;
   margin: 0 5px 5px 0;
 }
 .tools-box > .button:hover {

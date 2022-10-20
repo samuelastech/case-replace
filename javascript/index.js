@@ -4,6 +4,22 @@
 const textArea = document.querySelector('.text-area')
 const buttons = [...document.querySelectorAll('[id]')]
 const button = {}
+const tooltip = document.querySelector('.tooltiptext')
+
+const copyToClipboard = () => {
+    try {
+        const text = areaInnerText()
+        navigator.clipboard.writeText(text)
+        tooltip.innerText = 'Text copied!'
+    } catch (error) {
+        tooltip.innerText = 'You need to provide a text!'
+        console.log(error)
+    }
+}
+
+const resetTooltip = () => {
+    tooltip.innerText = 'Copy to clipboard'
+}
 
 /**
  * @returns the inner text of the text area

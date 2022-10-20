@@ -10,6 +10,7 @@
         <title>Case Replace</title>
         <meta name="description" content="A tool to manipulate any text you want to">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/9d5ed64226.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
@@ -18,6 +19,15 @@
         <![endif]-->
         <h1 class="title">Case Replace</h1>
         <main class="text-area" contenteditable="true" data-placeholder="Type or past (Ctrl+V) your text here"></main>
+        <div class="utils-box">
+            <button class="copy-clipboard" onclick="copyToClipboard()" onmouseout="resetTooltip()">
+                <span class="tooltiptext">Copy to clipboard</span>
+                Copy text <i class="icon fa-regular fa-copy"></i>
+            </button>
+        </div>
+
+        <hr class="divider">
+
         <div class="tools-box">
             <button class="button" id="toSentence">
                 Sentence case

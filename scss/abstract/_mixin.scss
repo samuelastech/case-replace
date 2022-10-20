@@ -2,3 +2,16 @@
     max-width: 768px;
     margin: 0 auto;
 }
+
+@mixin centralized-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@mixin button-reset{
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 200ms ease-out, transform 150ms ease;
+    padding: 10px 20px;
+}
