@@ -6,6 +6,9 @@ const buttons = [...document.querySelectorAll('[id]')]
 const button = {}
 const tooltip = document.querySelector('.tooltiptext')
 
+/**
+ * Copies the text from text area and paste in the clipboard
+ */
 const copyToClipboard = () => {
     try {
         const text = areaInnerText()
@@ -17,6 +20,9 @@ const copyToClipboard = () => {
     }
 }
 
+/**
+ * On mouse leave, the 'Copy to clipboard' is restored from 'Text copied!'
+ */
 const resetTooltip = () => {
     tooltip.innerText = 'Copy to clipboard'
 }
