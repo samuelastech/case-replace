@@ -20,7 +20,7 @@
         <h1 class="title">Case Replace</h1>
         <main class="text-area" contenteditable="true" data-placeholder="Type or past (Ctrl+V) your text here"></main>
         <div class="utils-box">
-            <button class="copy-clipboard" onclick="copyToClipboard()" onmouseout="resetTooltip()">
+            <button class="copy-clipboard" onclick="copy()" onmouseout="reset()">
                 <span class="tooltiptext">Copy to clipboard</span>
                 Copy text <i class="icon fa-regular fa-copy"></i>
             </button>
@@ -57,6 +57,10 @@
                 <span class="helptext">InveRSe = iNVErsE</span>
             </button>
         </div>
-        <script src="javascript/index.js" async defer></script>
+
+        <script src="javascript/utils.js"></script>
+        <script src="javascript/controller/InfosController.js"></script>
+        <script src="javascript/controller/CaseControllers.js"></script>
+        <script src="javascript/index.js"></script>
     </body>
 </html>
