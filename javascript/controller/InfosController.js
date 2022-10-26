@@ -3,6 +3,7 @@ class InfosController {
         this.textArea = textArea
         this.tooltip = document.querySelector('.tooltiptext')
         this.words = document.querySelector('#wordsCounter')
+        this.lines = document.querySelector('#linesCounter')
     }
 
     /**
@@ -15,6 +16,17 @@ class InfosController {
         const lastElement = textWords[quantity-1]
         if(lastElement === '') this.words.innerText = --quantity
         else this.words.innerText = quantity
+    }
+
+    /**
+     * Count the number of words in the text area
+     */
+     linesCounter = () => {
+        const text = this.textArea.innerText
+        const breakLines = text.split(/\n+/)
+        console.log(breakLines)
+        let quantity = breakLines.length
+        this.lines.innerText = quantity
     }
 
     /**

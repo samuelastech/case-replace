@@ -1,0 +1,24 @@
+{
+  "name": "case-replace",
+  "version": "1.0.0",
+  "description": "a tool for manipulating strings",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelastech/case-replace.git"
+  },
+  "keywords": [
+    "text",
+    "string",
+    "javascript",
+    "tool"
+  ],
+  "author": "Samuel Araujo de Souza <samuel.araujo.souza@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samuelastech/case-replace/issues"
+  },
+  "homepage": "https://github.com/samuelastech/case-replace#readme"
+}

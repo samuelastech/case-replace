@@ -52,3 +52,4 @@ buttons.forEach(element => {
  * Add multiples events listeners to the textarea
  */
 addEventListenerAll(textArea, 'keyup focusout', Infos.wordsCounter)
+addEventListenerAll(textArea, 'keyup focusout', Infos.linesCounter)
