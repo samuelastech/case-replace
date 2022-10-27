@@ -187,6 +187,10 @@ body {
   padding: 0 15px;
 }
 
+textarea {
+  all: unset;
+}
+
 .title {
   font-weight: 800;
   font-size: 2rem;
@@ -195,9 +199,11 @@ body {
 
 /* Makes the div become a textarea */
 .text-area {
+  display: block;
   max-width: 768px;
   margin: 0 auto;
   height: 150px;
+  width: 100%;
   cursor: text;
   overflow-y: auto;
   outline: none;
@@ -208,10 +214,6 @@ body {
   background-color: #f9fdfe;
   transition: border 0.2s ease-in-out;
   line-height: 1.75rem;
-}
-.text-area:empty:before {
-  content: attr(data-placeholder);
-  color: #737a91;
 }
 .text-area:focus {
   border-bottom: 1px solid #41B2D1;
@@ -244,9 +246,11 @@ body {
   background-color: #41B2D1;
   color: white;
   width: 170px;
+  height: 60px;
   border: none;
   border-radius: 4px;
   font-weight: 500;
+  margin: auto 0px;
 }
 .copy-clipboard:hover {
   background-color: #30a7c8;
@@ -320,6 +324,9 @@ body {
 
 .box-infos {
   margin-left: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 .box-infos > .label {
   font-weight: 800;

@@ -10,7 +10,7 @@ class InfosController {
      * Count the number of words in the text area
      */
     wordsCounter = () => {
-        const text = this.textArea.innerText
+        const text = this.textArea.value
         const textWords = text.split(/\s+/)
         let quantity = textWords.length
         const lastElement = textWords[quantity-1]
@@ -22,9 +22,8 @@ class InfosController {
      * Count the number of words in the text area
      */
      linesCounter = () => {
-        const text = this.textArea.innerText
-        const breakLines = text.split(/\n+/)
-        console.log(breakLines)
+        const text = this.textArea.value
+        const breakLines = text.split(/\n/)
         let quantity = breakLines.length
         this.lines.innerText = quantity
     }
@@ -55,7 +54,7 @@ class InfosController {
      * @throws an error if it's null
      */
      get #areaInnerText(){
-        const text = this.textArea.innerText
+        const text = this.textArea.value
     
         if(text){
             return text

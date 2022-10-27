@@ -9,7 +9,7 @@ class CaseController {
     toLower = () => {
         try {
             const text = this.#areaInnerText
-            this.textArea.innerText = text.toLowerCase()
+            this.textArea.value = text.toLowerCase()
         } catch (error) {
             console.log(error)
         }
@@ -21,7 +21,7 @@ class CaseController {
     toUpper = () => {
         try {
             const text = this.#areaInnerText
-            this.textArea.innerText = text.toUpperCase()
+            this.textArea.value = text.toUpperCase()
         } catch (error) {
             console.log(error)
         }
@@ -34,7 +34,7 @@ class CaseController {
         try {
             const text = this.#areaInnerText
             const capitalText = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
-            this.textArea.innerText = capitalText
+            this.textArea.value = capitalText
         } catch (error) {
             console.log(error)
         }
@@ -51,7 +51,7 @@ class CaseController {
                 const capitalText = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
                 capitalWord.push(capitalText)
             })
-            this.textArea.innerText = capitalWord.join(' ')
+            this.textArea.value = capitalWord.join(' ')
         } catch (error) {
             console.log(error)
         }
@@ -70,7 +70,7 @@ class CaseController {
                 invertedText += this.#isUpperCase(letter) ? letter.toLowerCase() : letter.toUpperCase()
             })
             
-            this.textArea.innerText = invertedText
+            this.textArea.value = invertedText
         } catch (error) {
             console.log(error)
         }
@@ -88,7 +88,7 @@ class CaseController {
      * @throws an error if it's null
      */
     get #areaInnerText(){
-        const text = this.textArea.innerText
+        const text = this.textArea.value
     
         if(text){
             return text
