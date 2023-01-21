@@ -2,9 +2,20 @@ class InfosController {
     constructor(textArea) {
         this.textArea = textArea
         this.tooltip = document.querySelector('.tooltiptext')
-        this.words = document.querySelector('#wordsCounter')
-        this.lines = document.querySelector('#linesCounter')
-        this.uniqueWords = document.querySelector('#uniqueWordsCounter')
+
+        let [
+            words,
+            lines,
+            uniqueWords
+        ] = [
+            'wordsCounter',
+            'linesCounter',
+            'uniqueWordsCounter'
+        ].map(item => document.getElementById(item))
+
+        this.words = words
+        this.lines = lines
+        this.uniqueWords = uniqueWords
     }
 
     /**
