@@ -22,7 +22,7 @@ const handleButtonClick = (buttonID) => {
 
         case 'toLower': Case.toLower()
             break;
-        
+
         case 'toUpper': Case.toUpper()
             break;
 
@@ -42,7 +42,7 @@ buttons.forEach(element => {
 
         // Removing .-error class on focusin
         const onError = textArea.classList.contains('-error')
-        if(onError) textArea.addEventListener('focusin', () => {
+        if (onError) textArea.addEventListener('focusin', () => {
             textArea.classList.remove('-error')
         })
     })
@@ -51,5 +51,6 @@ buttons.forEach(element => {
 /**
  * Add multiples events listeners to the textarea
  */
+addEventListenerAll(textArea, 'keyup focusout', Infos.uniqueWordsCounter)
 addEventListenerAll(textArea, 'keyup focusout', Infos.wordsCounter)
 addEventListenerAll(textArea, 'keyup focusout', Infos.linesCounter)

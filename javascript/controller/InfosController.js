@@ -1,9 +1,10 @@
 class InfosController {
-    constructor(textArea){
+    constructor(textArea) {
         this.textArea = textArea
         this.tooltip = document.querySelector('.tooltiptext')
         this.words = document.querySelector('#wordsCounter')
         this.lines = document.querySelector('#linesCounter')
+        this.uniqueWords = document.querySelector('#uniqueWordsCounter')
     }
 
     /**
@@ -13,15 +14,25 @@ class InfosController {
         const text = this.textArea.value
         const textWords = text.split(/\s+/)
         let quantity = textWords.length
-        const lastElement = textWords[quantity-1]
-        if(lastElement === '') this.words.innerText = --quantity
+        const lastElement = textWords[quantity - 1]
+        if (lastElement === '') this.words.innerText = --quantity
         else this.words.innerText = quantity
+    }
+
+    /**
+     * Count the number of unique words in the text area
+     */
+    uniqueWordsCounter = () => {
+        const text = this.textArea.value
+        const textWords = text.split(/\s+/)
+        const uniqueWords = Array.from(new Set(textWords)).length
+        this.uniqueWords.innerText = uniqueWords
     }
 
     /**
      * Count the number of words in the text area
      */
-     linesCounter = () => {
+    linesCounter = () => {
         const text = this.textArea.value
         const breakLines = text.split(/\n/)
         let quantity = breakLines.length
@@ -53,10 +64,10 @@ class InfosController {
      * @returns the inner text of the text area
      * @throws an error if it's null
      */
-     get #areaInnerText(){
+    get #areaInnerText() {
         const text = this.textArea.value
-    
-        if(text){
+
+        if (text) {
             return text
         } else {
             this.textArea.classList.add('-error')
