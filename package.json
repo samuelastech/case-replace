@@ -4,6 +4,7 @@
   "description": "a tool for manipulating strings",
   "main": "index.js",
   "scripts": {
+    "start": "npx http-server ."
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/samuelastech/case-replace/issues"
   },
-  "homepage": "https://github.com/samuelastech/case-replace#readme"
+  "homepage": "https://github.com/samuelastech/case-replace#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
 }
